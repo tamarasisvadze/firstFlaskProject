@@ -1,0 +1,20 @@
+{%extends 'login.html'%}
+{%block title%}
+  <p class="bal"><h1>Sign up Page</h1></p>
+  {%endblock%}
+{%block email%}
+ <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+{%endblock%}
+{%block name%}
+<label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" id="name" required>
+    {%endblock%}
+{% with messages = get_flashed_messages(with_categories = True) %}
+            {% for cat, msg in messages %}
+                <p class ="{{cat}}">{{msg}}</p>
+            {% endfor %}
+        {% endwith %}
+{%block button%}
+<span class="psw">Already have a user? <a href="{{url_for('login')}}">Login now</a></span>
+{%endblock%}

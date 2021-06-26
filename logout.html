@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+</head>
+<body>
+<style>
+    body {
+        background-color: #04AA6D;
+    }
+    .myDiv {
+  border: 5px outset red;
+  background-color: lightblue;
+  text-align: center;
+    }
+</style>
+<div class="myDiv">
+    <p>Are you Sure want to log out?</p>
+    <a href="{{url_for('lgt')}}"><input type="submit" value="Yes" style="background-color: red; color:white"></a>
+    <a href="{{url_for('index')}}"><input type="submit" value="No" style="background-color: green; color:white"></a>
+</div>
+</body>
+</html>
